@@ -68,7 +68,7 @@ public class MainApl {
         } else {
             System.out.print("Они равны");
         }
-    }
+    } //finish
 }
 
 
