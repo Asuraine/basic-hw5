@@ -8,7 +8,7 @@ public class MainApl {
     public static void main(String[] args) {
 
         hello(10, "Домашка!");
-        massiv1(5, new int[]{6, 8, 9, 6, 9});
+        massiv1(new int[]{6, 8, 9, 6, 9});
         massiv2(5, new int[]{6, 8, 9});
         massiv3(4, new int[]{3, 5, 5});
         int[] array = new int[]{11, 10, 2, 3, 4, 5};
@@ -22,13 +22,11 @@ public class MainApl {
         }
     }
 
-    public static void massiv1(int a, int[] b) {
+    public static void massiv1(int[] a) {
         int sum = 0;
-        for (int i = 0; i < b.length; i++) {
-            b[i] = (int) (Math.random() * 10);
-            //System.out.println(nums[i] + " ");
-            if (b[i] > 5) {
-                sum += b[i];
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > 5) {
+                sum += a[i];
             }
         }
         System.out.println(sum);
@@ -38,17 +36,18 @@ public class MainApl {
         array = new int[10];
         for (int i = 0; i < array.length; i++) {
             array[i] = number;
-            System.out.println(Arrays.toString(array));
-
         }
+        System.out.println(Arrays.toString(array));
+
     }
 
-    public static void massiv3(int a, int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int summ = arr[i] + a;
-            System.out.println(summ);
 
+    public static void massiv3(int a, int[] b) {
+        for (int i = 0; i < b.length; i++) {
+            b[i] = b[i] + a;
         }
+        System.out.println(Arrays.toString(b));
+
     }
 
     public static void massiv4(int[] array) {
@@ -68,7 +67,8 @@ public class MainApl {
         } else {
             System.out.print("Они равны");
         }
-    } //finish
+
+    }
 }
 
 
